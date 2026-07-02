@@ -1,0 +1,26 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+
+jobs:
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps: deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        environment:
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v6
+
+            - name: Upload Pages Artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                path: '.' 
+
+            - name: Deploy 🚀
+              uses: actions/deploy-pages@v4
