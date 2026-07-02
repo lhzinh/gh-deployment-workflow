@@ -36,3 +36,5 @@ After finishing this project, you will have a good understanding of the followin
 -   Writing GitHub Actions workflows
 
 Continue solving more projects for advanced CI/CD concepts.
+
+Link: [**GitHub Pages Deployment**](https://lhzinh.github.io/gh-deployment-workflow/)
